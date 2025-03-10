@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alimony Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="header">
+            <img src="woman.png" alt="Woman" class="woman-image">
+            <h1>Alimony Calculator</h1>
+            <p>Estimate your alimony based on various financial and social factors.</p>
+        </div>
+        <div class="calculator-form">
+            <div class="row">
+                <div class="column">
+                    <label>Age:</label>
+                    <input type="number" id="age" placeholder="Enter age">
+                </div>
+                <div class="column">
+                    <label>Education Level:</label>
+                    <select id="education">
+                        <option value="none">No Education</option>
+                        <option value="school">School</option>
+                        <option value="college">College</option>
+                        <option value="higher">Higher Studies</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="column">
+                    <label>Divorce Reason:</label>
+                    <select id="reason">
+                        <option value="mutual">Mutual Consent</option>
+                        <option value="abuse">Domestic Abuse</option>
+                        <option value="infidelity">Infidelity</option>
+                        <option value="financial">Financial Issues</option>
+                        <option value="neglect">Neglect</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="column">
+                    <label>Currently Employed:</label>
+                    <select id="job">
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="column">
+                    <label>Number of Children:</label>
+                    <input type="number" id="children" placeholder="Enter number of children">
+                </div>
+                <div class="column">
+                    <label>Marital Duration (years):</label>
+                    <input type="number" id="duration" placeholder="Enter years of marriage">
+                </div>
+            </div>
+            <div class="row">
+                <div class="column">
+                    <label>Monthly Expenses (in Rupees):</label>
+                    <input type="number" id="expenses" placeholder="Enter estimated expenses">
+                </div>
+                <div class="column">
+                    <label>Spouse's Monthly Income (in Rupees):</label>
+                    <input type="number" id="spouseIncome" placeholder="Enter spouse's income">
+                </div>
+            </div>
+            <div class="row">
+                <div class="column">
+                    <label>Standard of Living Before Divorce:</label>
+                    <select id="livingStandard">
+                        <option value="low">Low</option>
+                        <option value="medium">Medium</option>
+                        <option value="high">High</option>
+                    </select>
+                </div>
+                <div class="column">
+                    <label>Health Condition:</label>
+                    <select id="health">
+                        <option value="good">Good</option>
+                        <option value="average">Average</option>
+                        <option value="poor">Poor</option>
+                    </select>
+                </div>
+            </div>
+            <label>Property Ownership:</label>
+            <select id="property">
+                <option value="none">No Property</option>
+                <option value="some">Some Property</option>
+                <option value="substantial">Substantial Property</option>
+            </select>
+            <button onclick="calculateAlimony()">Calculate Alimony</button>
+            <h3 id="result"></h3>
+        </div>
+    </div>
+</body>
+</html>
